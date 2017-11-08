@@ -8,7 +8,7 @@
     "example": "browserify example/browser.js -o example/bundle.js -t babelify --debug && babel-node example/server.js",
     "format": "jsfmt -w *.js src/ test/",
     "lint": "eslint src/ test/",
-    "prepublish": "npm run build",
+    "install": "npm run build",
     "test": "karma start"
   },
   "keywords": [
@@ -22,15 +22,15 @@
   "repository": "https://github.com/cloudflare/react-gateway",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "babel-cli": "^6.1.1",
+    "babel-preset-cf": "^1.2.0",
     "prop-types": "^15.5.0",
     "react": "^0.14.2 || ^15.0.0-0",
     "react-prop-types": "^0.4.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.1.1",
     "babel-core": "^6.0.20",
     "babel-eslint": "^6.0.2",
-    "babel-preset-cf": "^1.2.0",
     "babelify": "^7.2.0",
     "browserify-istanbul": "^0.2.1",
     "chai": "^3.4.1",
