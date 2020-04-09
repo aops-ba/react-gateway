@@ -18,9 +18,6 @@ export default class Gateway extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.gatewayRegistry = context.gatewayRegistry;
-  }
-
-  componentWillMount() {
     this.id = this.gatewayRegistry.register(this.props.into, this.props.children);
     this.renderIntoGatewayNode(this.props);
   }
